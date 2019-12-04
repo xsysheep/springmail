@@ -18,9 +18,6 @@ server:
     max-threads: 300
     accept-count: 200
   port: 8081
-mybatis:
-  type-aliases-package: com.zb.mapper
-  mapper-locations: classpath:mapping/*.xml
 
 pagehelper:
   helper-dialect: mysql
@@ -37,9 +34,9 @@ logging:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    url: jdbc:mysql://localhost:3306/xsy?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=UTC
     username: root
-    password: root
+    password: xsy
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat
@@ -58,11 +55,22 @@ spring:
   mail:
     username: 170584078@qq.com
     host: smtp.qq.com
-    password: *******
+    password: fndgqcpuklnjbjbh
     properties:
       mail:
         smtp:
+          transport: fndgqcpuklnjbjbh
           auth: true
           starttls:
             enable: true
             required: required
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.demo.bean
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
