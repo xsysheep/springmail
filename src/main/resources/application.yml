@@ -33,7 +33,7 @@ logging:
 
 ---
 
-#¿ª·¢ÅäÖÃ
+#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 spring:
   profiles: dev
   datasource:
@@ -58,7 +58,7 @@ spring:
   mail:
     username: 170584078@qq.com
     host: smtp.qq.com
-    password: sheep2018334
+    password: *******
     properties:
       mail:
         smtp:
